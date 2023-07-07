@@ -7,14 +7,10 @@ const Sidebar = () => {
     <>
         <div className='sidebar'>
             <ul> 
-                <text className='option-text'>Opciones de sistema</text>
+                <text className='option-text '>Opciones de sistema</text>
                 <li>  
-                    <Link to={"/#"}  ><FaIcons.FaHome/> Inicio </Link>
+                    <Link to={"/#"} className='btn btn-secundary' ><FaIcons.FaHome/> Inicio </Link>
                 </li> 
-                <li>
-                    <Link to={"/config"} ><FaIcons.FaRegWindowRestore/>Configuracion</Link>
-                </li>
-              
             </ul>
         </div>
     </>

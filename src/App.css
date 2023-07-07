@@ -74,15 +74,16 @@
   width: 14rem;
   height: calc(100vh - 52px);
   display: grid;
+  margin: 0;
   border-right: 1px solid gray;
-  .option-text{
-    color: green;
-    font-size: larger;
-    align-content:center ;
-  }
+  
 }
 
-
+.option-text{
+  color: green;
+  font-size: larger;
+  align-content:center ;
+}
 .cabezal{
   background-color: whitesmoke;
   border-bottom: 1px solid gray;
@@ -109,4 +110,20 @@
   align-items:'center';
   padding:'2px';
   margin-top:'-20px'
+}
+
+.plot{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header{
+  text-align: center;
+  background-color: greenyellow;
+}
+
+.plt{
+display: grid;
+place-items:'left';
 }
