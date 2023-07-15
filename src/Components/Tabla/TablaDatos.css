@@ -1,0 +1,18 @@
+.tabla-datos {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+  
+  .tabla-datos th,
+  .tabla-datos td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #202dc0;
+    border-right: 1px solid #ccc; /* Agrega este estilo para los separadores entre columnas */
+  }
+  
+  .tabla-datos th:last-child,
+  .tabla-datos td:last-child {
+    border-right: none; /* Elimina el separador de la última columna */
+  }

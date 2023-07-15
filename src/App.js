@@ -3,6 +3,9 @@ import Plot from "react-plotly.js";
 import Header from "./../src/Components/Head/Header.jsx";
 import "./App.css";
 import SimpleTable from "./Components/Tabla/SimpleTable.jsx";
+import TablaDatos from "./Components/Tabla/TablaDatos.js";
+import TablaAlimentacion from "./Components/Tabla/TablaAlimentacion.js";
+import "./Components/Tabla/TablaDatos.css"
 
 function App() {
   const [chartData, setChartData] = useState([]);
@@ -74,7 +77,13 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="plt">
+
+      <div style={{ display: 'flex', height: '50vh' }}>
+      <diV style={{ flex: 1, width: '50%', backgroundColor:'#dc8b4adf' }}>
+        <TablaDatos></TablaDatos>
+      </diV>
+
+      <div className="plt" style={{ flex: 1, width: '50%', backgroundColor: 'blue' }}>
       <Plot
           style={{
             width: "50vh",
@@ -82,26 +91,39 @@ function App() {
             position: "relative",
             margin: "0 ",
             top: "20px",
-            left: "360px",
+            left: "25%",
             display: "grid",
           }}
           data={dataT}
         />
       </div>
-      <div className="plot">
-        
+      </div>
+
+
+
+
+
+      <div style={{ display: 'flex', height: '50vh' }}>
+
+      <div style={{ flex: 1, width: '50%', backgroundColor: 'green' }}>
+        <TablaAlimentacion></TablaAlimentacion>
+      </div>
+
+      <div className="plot" style={{ flex: 1, width: '50%', backgroundColor: 'yellow' }}>
         <Plot
           style={{
             width: "50vh",
             height: "45vh",
             position: "relative",
             margin: "0 ",
-            top: "-278px",
-            left: "360px",
+            top:'0px',
+            left: "0px",
             display: "grid",
           }}
           data={dataPh}
         />
+      </div>
+    
       </div>
     </>
   );
