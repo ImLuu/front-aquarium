@@ -6,6 +6,8 @@ import SimpleTable from "./Components/Tabla/SimpleTable.jsx";
 import TablaDatos from "./Components/Tabla/TablaDatos.js";
 import TablaAlimentacion from "./Components/Tabla/TablaAlimentacion.js";
 import "./Components/Tabla/TablaDatos.css";
+import Tabla3 from "./Components/Tabla/Tabla3.js"
+import Tabla4 from "./Components/Tabla/Tabla4.js"
 
 function App() {
   const [chartData, setChartData] = useState([]);
@@ -85,7 +87,7 @@ function App() {
 
       <div style={{ display: "flex", height: "50vh" }}>
         <diV style={{ flex: 1, width: "50%", margin: "15px" }}>
-          <TablaDatos></TablaDatos>
+          <Tabla4></Tabla4>
         </diV>
 
         <div className="plt" style={{ flex: 1, width: "50%" }}>
@@ -106,7 +108,7 @@ function App() {
 
       <div style={{ display: "flex", height: "50vh" }}>
         <div style={{ flex: 1, width: "70%", margin: "15px" }}>
-          <TablaAlimentacion></TablaAlimentacion>
+          <Tabla3></Tabla3>
         </div>
 
         <div className="plot" style={{ flex: 1, width: "50%" }}>
