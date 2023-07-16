@@ -5,7 +5,7 @@ import "./App.css";
 import SimpleTable from "./Components/Tabla/SimpleTable.jsx";
 import TablaDatos from "./Components/Tabla/TablaDatos.js";
 import TablaAlimentacion from "./Components/Tabla/TablaAlimentacion.js";
-import "./Components/Tabla/TablaDatos.css"
+import "./Components/Tabla/TablaDatos.css";
 
 function App() {
   const [chartData, setChartData] = useState([]);
@@ -38,6 +38,11 @@ function App() {
     };
   });
 
+  //Vamos a obtener la info de la base e imprimir
+  const info = {
+    
+  }
+
   var dataPh = [
     {
       type: "indicator",
@@ -53,14 +58,13 @@ function App() {
     {
       type: "indicator",
       mode: "gauge+number",
-      title: { text: "Indicador de Temperatura °C" },
+      title: { text: "Indicador de Temp °C" },
       value: 4,
       domain: { row: 0, column: 1 },
       delta: { reference: 400 },
       gauge: { axis: { range: [-273.0, 273.0] } },
     },
   ];
-  
 
   return (
     <>
@@ -70,61 +74,57 @@ function App() {
           <div className="row">
             <div className="col-sm-4 mt-4">
               <div className="table">
-                <div className="header" style={{marginTop:'30px'}}>Grafica</div>
-                <SimpleTable />
+                <div className="header" style={{ marginTop: "30px" }}>
+                  Tabla de Datos{" "}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div style={{ display: 'flex', height: '50vh' }}>
-      <diV style={{ flex: 1, width: '50%', backgroundColor:'#dc8b4adf' }}>
-        <TablaDatos></TablaDatos>
-      </diV>
+      <div style={{ display: "flex", height: "50vh" }}>
+        <diV style={{ flex: 1, width: "50%", margin: "15px" }}>
+          <TablaDatos></TablaDatos>
+        </diV>
 
-      <div className="plt" style={{ flex: 1, width: '50%', backgroundColor: 'blue' }}>
-      <Plot
-          style={{
-            width: "50vh",
-            height: "45vh",
-            position: "relative",
-            margin: "0 ",
-            top: "20px",
-            left: "25%",
-            display: "grid",
-          }}
-          data={dataT}
-        />
-      </div>
-      </div>
-
-
-
-
-
-      <div style={{ display: 'flex', height: '50vh' }}>
-
-      <div style={{ flex: 1, width: '50%', backgroundColor: 'green' }}>
-        <TablaAlimentacion></TablaAlimentacion>
+        <div className="plt" style={{ flex: 1, width: "50%" }}>
+          <Plot
+            style={{
+              width: "50vh",
+              height: "45vh",
+              position: "relative",
+              margin: "0 ",
+              top: "20px",
+              left: "25%",
+              display: "grid",
+            }}
+            data={dataT}
+          />
+        </div>
       </div>
 
-      <div className="plot" style={{ flex: 1, width: '50%', backgroundColor: 'yellow' }}>
-        <Plot
-          style={{
-            width: "50vh",
-            height: "45vh",
-            position: "relative",
-            margin: "0 ",
-            top:'0px',
-            left: "0px",
-            display: "grid",
-          }}
-          data={dataPh}
-        />
+      <div style={{ display: "flex", height: "50vh" }}>
+        <div style={{ flex: 1, width: "70%", margin: "15px" }}>
+          <TablaAlimentacion></TablaAlimentacion>
+        </div>
+
+        <div className="plot" style={{ flex: 1, width: "50%" }}>
+          <Plot
+            style={{
+              width: "50vh",
+              height: "45vh",
+              position: "relative",
+              margin: "0 ",
+              top: "0px",
+              left: "15px",
+              display: "grid",
+            }}
+            data={dataPh}
+          />
+        </div>
       </div>
-    
-      </div>
+     
     </>
   );
 }
