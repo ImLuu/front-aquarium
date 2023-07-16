@@ -85,18 +85,25 @@
   align-content:center ;
 }
 .cabezal{
-  background-color: whitesmoke;
+  
   border-bottom: 1px solid gray;
   padding: 20px;
   box-sizing: border-box;
-  
+  background: rgb(0,162,17);
+  background: radial-gradient(circle, rgba(0,162,17,1) 0%, rgba(164,255,0,0.8481677827380952) 35%, rgba(0,255,9,1) 100%);
+  color:white;
+  font-size: x-large;
+  border: double;
 }
 
 .interior{
   font-size: 95%;
-  color: green;
+  color:white;
   margin-right: 75%;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   
 }
 
@@ -120,7 +127,11 @@
 
 .header{
   text-align: center;
-  background-color: greenyellow;
+  background: rgb(0,162,17);
+  background: radial-gradient(circle, rgba(0,162,17,1) 0%, rgba(164,255,0,0.8481677827380952) 35%, rgba(0,255,9,1) 100%);
+  color:white;
+  font-size: x-large;
+  border: double;
 }
 
 .plt{
